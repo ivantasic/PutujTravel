@@ -1,0 +1,511 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*loader*/
+
+div#load_screen{
+	background: gray;
+	opacity: 1;
+	position: fixed;
+	z-index:10;
+	top: 0px;
+	width: 100%;
+	height: 1600px;
+}
+
+div#load_screen > div#loading{
+	color:#fff;
+	width: 120px;
+	height: 24px;
+	margin: 300px auto;
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+body {
+  background-color: #dbdbdb;
+  font-family: BebasNeueRegular;
+}
+
+/* velicina h1 */
+h1 {
+	font-size: 30px;
+  font-family: BebasNeueRegular;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-family: BebasNeueRegular;
+}
+
+.logo {
+  width: 50px;
+ height: 50px;
+}
+
+/*navbar*/
+
+.navbar-inverse .navbar-nav>li>a {
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	display: block;
+}
+
+.dropdown-menu>li>a{
+	letter-spacing: 0.1rem;
+}
+
+.list-unstyled li{
+padding: 1.25rem;
+border-bottom: 1px solid #d9534f;
+}
+
+.list-unstyled li a{
+color: black;
+text-decoration: none;
+}
+
+.list-unstyled li a:hover{
+color: #d9534f;
+}
+
+.panel-title a{
+	text-decoration: none;
+	font-weight: bolder;
+}
+
+.panel-collapse.collapse.in{
+	box-shadow: 1px 6px 20px -5px #000;
+	transform: all 0.5s ease-in;
+}
+
+/*footer*/
+
+footer {
+padding: 2rem;
+background-color: #49796b;
+margin-top: 2rem;
+}
+
+footer a {
+color: black;
+transition: color 0.4s ease-in;
+padding: 0.2rem;
+letter-spacing: 0.2rem;
+text-transformation: uppercase;
+}
+
+footer a:hover {
+color: red;
+text-decoration: none;
+}
+
+footer p {
+letter-spacing: 0.2rem;
+text-decoration: uppercase;
+}
+
+
+
+/*Tekst preko videa*/
+
+.btn-do {
+	font-size: 25px;
+	padding: 20px;
+	bottom: 0px;
+	color: white;
+	width: 200px;
+	background: rgba(0,0,0,0.5);
+	box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.8);
+	border-radius: 10px;
+	position: relative;
+  top: -70vh;
+	cursor: pointer;
+	transition: 0.4s ease;
+}
+
+.btn-do:hover {
+	transform: translate(0px, -2px);
+	background: rgba(0,0,0,0.9);
+	box-shadow: 0px 37px 20px -20px rgba(0,0,0,0.6);
+}
+
+/*header visina*/
+
+header {
+	height: 85px;
+    background-color: #49796b;
+}
+
+/*video opcije*/
+
+.videof, .videot {
+    width: 100%;
+    height: 100%;
+ }
+
+.centar {
+   z-index: 1;
+
+ }
+
+.stvari {
+   z-index: 2;
+ }
+
+.container { 
+position:relative; 
+}
+.container video {
+    position:relative;
+    z-index:0;
+    width: 100%;
+    height: 100%;
+}
+.overlay {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+/*progres barovi boja*/
+
+.progress-bar {
+  background-color: #49796b;
+}
+
+
+/*Donji deo, section slika, bakcground*/
+
+#sectionn {
+  background-image: url(blur.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: inherit;
+    background-position: 50% 50%;)
+  
+  
+}
+
+
+/*Galerija*/
+
+
+/*responsive*/
+
+@media screen and (max-width:800px) {
+  .btn-do{
+    display: none;
+}
+
+  .dobrodosli{
+    display: none;
+  }
+.carousel-example-generic {
+  display: none;
+}
+}
+
+@media screen and (max-width:1024px) {
+  .btn-do{
+    top: -40vh;
+}
+
+  .dobrodosli{
+    display: none;
+  }
+}
+
+
+
+/*vodici o nama*/
+
+.paddingTB60 {
+    padding-top:60px;
+    padding-bottom:60px;
+}
+.bgcolor-skyblue {
+    background:#eaf0f9;
+}
+ .image-aboutus-banner {
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(pocetnavelikak.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 110px;
+    padding-bottom:110px;
+    background-attachment: fixed;
+
+ }
+
+ .image-aboutus-banner2 {
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(pe.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 110px;
+    padding-bottom:110px;
+    background-attachment: fixed;
+ }
+
+ .image-aboutus-banner3 {
+    background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url(pic.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-top: 110px;
+    padding-bottom:110px;
+    background-attachment: fixed;
+ }
+
+
+.sidebar {
+  background: #fff;
+  background: rgba(255,255,255,255,0.6);
+  -moz-box-shadow: 0px 0 3px rgba(0,0,0,0.4);
+  -webkit-box-shadow: 0px 0 3px rgba(0,0,0,0.4);
+  box-shadow: 0px 0 3px rgba(0,0,0,0.4);
+  padding-bottom: 20px;
+
+  
+}
+
+.sidebar-inner {
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.sidebar h3 {
+  font: BebasNeueRegular;
+  font-size: 30px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.sidebar ul li {
+  list-style-type: none;
+  margin-bottom: 5px;
+}
+
+.sidebar ul li:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar ul li a {
+  background: #eee;
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+}
+.sidebar ul li a:hover {
+  background-color: #3d667e;
+  color: #fff;
+}
+.sidebar ul .sidebar-inner-image a{
+  display: block;
+  height: 48px;
+  line-height: 48px;
+  padding: 5px 5px 5px 70px;
+}
+
+.sidebar-inner-image .sidebar-inner-jana {
+  background: #eee url(jana.jpg) 1px no-repeat;
+
+}
+
+.sidebar-inner-image .sidebar-inner-marija {
+  background: #eee url(marija.jpg) 1px no-repeat;
+
+}
+
+.sidebar-inner-image .sidebar-inner-dejan {
+  background: #eee url(dejan.jpg) 1px no-repeat;
+
+}
+
+.sidebar-inner-image .sidebar-inner-tamara {
+  background: #eee url(tamara.jpeg) 1px no-repeat;
+
+}
+
+.sidebar-inner-image .sidebar-inner-janko {
+  background: #eee url(janko.jpeg) 1px no-repeat;
+
+}
+
+
+#media {
+  display: block;
+  float: right;
+  margin-top: -45px;
+  margin-right: 5px;
+  padding: 0px;
+  background: none;
+  
+}
+.fab:hover{
+  color: #000f28;
+}
+
+.mdb-lightbox {
+  margin-top: 50px;
+}
+#figure {
+  padding: 10px;
+}
+
+
+
+/*usluge,image hover*/
+
+#hover01 {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+#hover01:hover {
+  opacity: .6;
+}
+
+
+
+.holder{
+    width: 100%;
+    height:100%;
+    position:relative;
+}
+.frame{
+    width:100%;
+    height:100%;
+    position: absolute;
+    top: 300px;
+    left: 0px;
+}
+.bar{
+    position:absolute;
+    top:400px;
+    left:50px;
+    width:100%;
+    height:40px;
+}
+
+.mapa {
+  margin-left: 40px; 
+}
